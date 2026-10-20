@@ -742,13 +742,57 @@ section.tight { padding: 60px 0; }
 .btn-full {
   width: 100%;
 }
+/* --- Badges de CRO & Fricção Zero --- */
+.cro-pills {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.cro-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .84rem;
+  font-weight: 600;
+  color: var(--verde-800);
+  background: var(--verde-100);
+  border: 1px solid var(--verde-200);
+  padding: 6px 14px;
+  border-radius: var(--pill);
+}
+.micro-sla {
+  display: block;
+  font-size: .86rem;
+  color: var(--verde-200);
+  margin-top: 14px;
+}
+.hero .micro-sla {
+  color: #CFE0B4;
+  font-size: .88rem;
+  font-style: normal;
+}
+.form-step-badge {
+  display: inline-block;
+  font-size: .75rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--terra-600);
+  background: var(--terra-100);
+  padding: 3px 10px;
+  border-radius: var(--pill);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
 .form-guarantee {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: .84rem;
-  color: var(--tinta-3);
+  font-size: .85rem;
+  color: var(--tinta-2);
   margin-top: 18px;
   text-align: center;
 }
@@ -812,7 +856,7 @@ section.tight { padding: 60px 0; }
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--verde-900);
-  color: #A9B79A;
+  color: #D8E4C7;
   padding: 60px 0 32px;
   font-size: .92rem;
 }
@@ -826,7 +870,7 @@ section.tight { padding: 60px 0; }
   color: #fff;
 }
 .site-footer .brand small {
-  color: #A9CC7A;
+  color: #CFE0B4;
 }
 .site-footer h3 {
   color: #fff;
@@ -838,30 +882,31 @@ section.tight { padding: 60px 0; }
   font-weight: 600;
 }
 .site-footer a {
-  color: #C5D0B6;
+  color: #E8F0DA;
   display: block;
   margin-bottom: 9px;
   transition: color .15s;
 }
 .site-footer a:hover {
   color: #fff;
+  text-decoration: underline;
 }
 .site-footer .tagline {
   font-family: var(--display);
   font-style: italic;
-  color: var(--verde-200);
+  color: #CFE0B4;
   margin-top: 14px;
   max-width: 36ch;
 }
 .site-footer .legal {
-  border-top: 1px solid rgba(255,255,255,.12);
+  border-top: 1px solid rgba(255,255,255,.14);
   padding-top: 22px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
   font-size: .82rem;
-  color: #9AA88C;
+  color: #B9CBA5;
 }
 
 /* ---------- Responsive ---------- */
