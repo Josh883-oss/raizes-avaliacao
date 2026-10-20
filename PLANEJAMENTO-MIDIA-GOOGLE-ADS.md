@@ -1,4 +1,4 @@
-# Planejamento Completo de Mídia — Google Ads
+# Planejamento Completo de Mídia & Playbook Comercial — Google Ads
 ## Projeto: Avaliação de Fazendas e Imóveis Rurais em Minas Gerais (Raízes)
 **Frameworks Aplicados:** Perry Marshall (*Ultimate Guide to Google Ads*), Pedro Sobral (*Gestão de Tráfego*), April Dunford (*Obviously Awesome*) e *Paid-Media L4*.
 
@@ -65,63 +65,104 @@ CONTA GOOGLE ADS: RAÍZES ENGENHARIA RURAL
 
 ---
 
-### 4. Segmentação Geográfica & Dayparting (Programação de Horários)
+### 4. Segmentação Geográfica, Dispositivos & Horários (Dayparting)
 
-#### Segmentação de Locais (Regra Zero contra desperdício):
+#### Segmentação de Locais:
 * **Configuração:** **Presença** (*"Pessoas que estão na sua região de segmentação ou costumam frequentá-la"*).
-* **Bloqueio Ativo:** Excluir explicitamente todos os outros 26 estados da federação para garantir que nenhuma consulta fora de MG consuma orçamento.
-* **Ajuste de Lance por Região (+15% a +25%):**
-  * Campo das Vertentes (São João del-Rei, Barbacena, Barroso, Lavras, Juiz de Fora).
-  * Polo Capital (Belo Horizonte e Nova Lima — tomadores de decisão de alto poder aquisitivo).
-  * Triângulo Mineiro e Noroeste de Minas (Uberlândia, Uberaba, Paracatu, Unaí).
+* **Bloqueio Ativo:** Excluir os outros 26 estados da federação.
+* **Ajuste de Lances por Microrregião:**
+  * Campo das Vertentes (Barroso, São João del-Rei, Barbacena, Lavras, Juiz de Fora): **+20% de lance** (custo de vistoria baixo, fechamento rápido).
+  * Polo Capital (Belo Horizonte e Nova Lima): **+15% de lance** (alto poder aquisitivo e grandes inventários).
+  * Triângulo Mineiro e Noroeste de Minas (Uberlândia, Uberaba, Paracatu, Unaí): lance base (grandes glebas).
+
+#### Ajuste por Dispositivo (Bid Adjustment):
+* **Smartphones (Mobile):** **+15% de lance** (80%+ das conversões diretas para WhatsApp).
+* **Computadores (Desktop):** Lance base (advogados e executivos em horário de escritório).
+* **Tablets:** **-50% de lance** (volume irrelevante e tráfego disperso).
 
 #### Programação de Horários (Dayparting — GOTCHA-PMD-008):
-Produtores rurais e advogados buscam esse serviço durante o expediente de negócios.
 * **Segunda a Sexta-feira:** 07h30 às 19h30 (100% de lance).
 * **Sábados:** 08h00 às 13h00 (70% de lance).
 * **Domingos e Madrugadas (20h às 06h):** **PAUSADO / LANCE -100%**.
-  * *Motivo:* Cliques de madrugada têm taxa de resposta no WhatsApp quase nula. O lead esfria até o dia seguinte.
+  * *Motivo:* Cliques fora de horário de atendimento esfriam e não convertem.
 
 ---
 
-### 5. Engenharia de Quality Score (Relevância Tríplice 10/10)
+### 5. Rastreamento Duplo de Conversões (Blindagem do Algoritmo)
 
-O algoritmo do Google Ads concede **até 50% de desconto no CPC** para contas com Quality Score (Índice de Qualidade) entre 8 e 10. A Raízes atinge isso através do **Message Match Perfeito**:
+No Google Ads, crie **duas ações de conversão** para alimentar o algoritmo com sinal completo:
 
-| Componente | Exemplo Prático de Alinhamento |
-|---|---|
-| **1. Termo Pesquisado** | `laudo de avaliacao de imovel rural para garantia bancaria` |
-| **2. Palavra-chave no Grupo** | `"laudo de avaliacao de imovel rural"` / `[avaliacao fazenda banco]` |
-| **3. Título do Anúncio** | `Laudo de Avaliação Rural NBR 14653 · Aceito em Bancos` |
-| **4. Headline da Landing Page** | *"Avaliação Técnica e Pericial de Fazendas em Minas Gerais — Aceito no Banco do Brasil e SFN"* |
-| **Resultado no Google Ads** | **Quality Score 9/10 ou 10/10 → CPC cai de R$ 9,00 para ~R$ 5,50.** |
+1. **Ação Primária (Macro-conversão):** `Envio de Formulário (Lead Completo)`
+   * *Disparo:* Carregamento da página `obrigado.html` ou evento `generate_lead`.
+   * *Valor de referência:* R$ 150,00.
+2. **Ação Secundária (Micro-conversão):** `Clique Direto no WhatsApp`
+   * *Disparo:* Evento `click_whatsapp` (já implementado no `landing.js` em todos os botões da página).
+   * *Valor de referência:* R$ 75,00.
 
----
-
-### 6. Estrutura de Lances & Evolução da Campanha
-
-* **Fase 1 (Dia 1 ao Dia 21):**
-  * Estratégia: **Maximizar Cliques com Limite de CPC Máximo** (Fixar em R$ 7,50 a R$ 8,50).
-  * Objetivo: Coletar volume de dados sem deixar o Google estourar lances de R$ 15 num único clique.
-* **Fase 2 (Após 15 conversões registradas na página de obrigado):**
-  * Estratégia: Mudar para **Maximizar Conversões**.
-  * O algoritmo do Google já saberá o perfil do usuário que preenche o formulário e chamará o WhatsApp.
-* **Fase 3 (Após 40 conversões):**
-  * Estratégia: **CPA Desejado (Target CPA)** fixado em R$ 90,00 a R$ 110,00 por lead qualificado.
+Dessa forma, mesmo que o produtor rural não preencha o formulário e clique direto no botão do WhatsApp, o Google Ads contabiliza a conversão e o aprendizado de máquina continua otimizando a entrega para encontrar mais produtores reais.
 
 ---
 
-### 7. Rotina Semanal de Gestão (O Princípio 80/20 de Perry Marshall)
+### 6. Script de Atendimento Comercial no WhatsApp (SLA < 5 Minutos)
+
+O tráfego pago traz a oportunidade; o atendimento rápido fecha o contrato. Ter respostas estruturadas nos primeiros 5 minutos eleva a taxa de fechamento de 5% para mais de 18%.
+
+#### Etapa 1: Resposta Imediata (Boas-Vindas & Autoridade Técnica)
+> *"Olá, [Nome]! Tudo bem? Aqui é o [Seu Nome], da Raízes — Avaliação de Imóveis Rurais em Minas Gerais.*
+>
+> *Recebi sua solicitação para a avaliação da propriedade em [Município] (área aproximada de [X] hectares).*
+> 
+> *Para que eu já prepare a estimativa precisa de honorários e o cronograma de vistoria, me conte: qual é a finalidade principal do laudo? (Ex: garantia bancária para custeio, inventário de família ou negociação de compra/venda)?"*
+
+#### Etapa 2: As 3 Perguntas de Qualificação Técnica
+1. **Instituição/Destino:** *"O laudo precisa ser apresentado a qual banco ou instituição (Banco do Brasil, Sicoob, Bradesco, etc.) ou é para processo de inventário no cartório?"*
+2. **Documentação:** *"A fazenda já possui a certidão de matrícula recente e o CAR (Cadastro Ambiental Rural) em mãos?"*
+3. **Urgência do Cronograma:** *"Você tem um prazo estipulado pelo gerente do banco ou pelo advogado para a entrega do documento assinado?"*
+
+#### Etapa 3: Apresentação da Proposta de Honorários (Ancoragem de Valor)
+Nunca passe apenas um número solto no WhatsApp. Envie uma mensagem estruturada destacando o escopo:
+> *"Com base no porte da propriedade em [Município] e na conformidade com a ABNT NBR 14653-3, nosso escopo contempla:*
+>
+> *✓ Vistoria técnica presencial in loco com registro fotográfico georreferenciado;*  
+> *✓ Caracterização pedológica de solos, benfeitorias, pastagens/lavouras e outorgas d'água;*  
+> *✓ Tratamento estatístico de mercado por regressão linear na microrregião;*  
+> *✓ Emissão de ART (Anotação de Responsabilidade Técnica) registrada no CREA-MG;*  
+> *✓ Entrega do Dossiê Pericial completo com assinatura digital qualificada ICP-Brasil.*
+>
+> *Prazo de entrega: [X] dias úteis após a vistoria.*  
+> *Investimento técnico: R$ [Valor] (Condição: 50% de entrada e 50% na entrega da minuta e laudo conclusivo).*
+>
+> *Podemos agendar a vistoria para [Dia da semana]?"*
+
+---
+
+### 7. Configuração de Subdomínio Personalizado (`avaliacao.raizes.agr.br`)
+
+Para migrar a URL do GitHub Pages para o domínio da marca Raízes e maximizar o Quality Score:
+
+1. **No seu Gerenciador de DNS (Registro.br ou Cloudflare):**
+   * Adicione uma nova entrada de DNS:
+     * **Tipo:** `CNAME`
+     * **Nome / Host:** `avaliacao`
+     * **Destino / Valor:** `josh883-oss.github.io`
+     * **TTL:** Automático ou 3600
+2. **No Repositório do GitHub (`raizes-avaliacao`):**
+   * Basta criar um arquivo chamado `CNAME` na raiz com o conteúdo: `avaliacao.raizes.agr.br`.
+   * O GitHub Pages gerará o certificado SSL automaticamente em poucos minutos.
+
+---
+
+### 8. Ritual Semanal de Gestão (O Princípio 80/20 de Perry Marshall)
 
 Para manter a conta blindada e lucrativa, seguir este ritual de 20 minutos por semana:
 
-1. **Terça-feira (Auditoria de Search Terms):**
+1. **Terça-feira (Negativação Ativa):**
    * Acessar o relatório de *Termos de Pesquisa reais*.
    * Qualquer termo com palavras fora do escopo (`concurso`, `curso`, `apartamento`, `tcc`, `modelo doc`) deve ser adicionado à lista de **Palavras-Chave Negativas** imediatamente.
-2. **Quinta-feira (Análise de Desempenho de Anúncios):**
-   * Verificar a métrica *Search Impression Share* (Parcela de Impressões na Rede de Pesquisa).
-   * Se a perda de impressões for por *Orçamento* → oportunidade de escala lucrativa.
-   * Se a perda for por *Classificação* → ajustar extensões de anúncio ou melhorar Quality Score.
-3. **Mensal (Aplicação do 80/20):**
-   * Identificar os 20% das palavras-chave que geraram 80% das mensagens no WhatsApp.
-   * Pausar termos que gastaram mais de R$ 80,00 sem gerar nenhuma conversão.
+2. **Quinta-feira (Search Impression Share):**
+   * Avaliar a *Parcela de Impressões na Rede de Pesquisa*.
+   * Se a perda for por *Orçamento*, significa que a campanha está dando lucro e aceita mais verba para gerar mais laudos.
+   * Se a perda for por *Classificação*, ajustamos as extensões de anúncio ou Quality Score.
+3. **Fim do Mês (Corte 80/20):**
+   * Identificar os 20% das palavras-chave que trouxeram 80% das mensagens no WhatsApp.
+   * Pausar termos que gastaram mais de R$ 80 sem gerar nenhuma mensagem.

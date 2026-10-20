@@ -1,6 +1,7 @@
 /* ============================================================
    RAÍZES — Avaliação de Fazendas e Imóveis Rurais
    Script da Landing Page · Alta Conversão · Lead Capture
+   Rastreamento Tríplice: Form + WhatsApp Direto + Mobile Bar
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (anoSpan) anoSpan.textContent = new Date().getFullYear();
 
   // Configuração padrão do WhatsApp de atendimento (DDD + Número)
-  // Substitua pelo número oficial caso necessário
   const WA_DEFAULT_NUMBER = "5532920004387"; 
 
   // Máscara de Telefone / WhatsApp (XX) XXXXX-XXXX
@@ -32,6 +32,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Rastreamento de Conversão em Cliques Diretos no WhatsApp (Perry Marshall §1.3)
+  // Garante que o Google Ads registre como conversão quem clica no botão sem preencher o form
+  const waButtons = document.querySelectorAll('a[href*="wa.me"]');
+  waButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const label = btn.getAttribute('aria-label') || btn.innerText.trim() || 'WhatsApp Direto';
+      
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'click_whatsapp', {
+          event_category: 'Engenharia de Avaliações',
+          event_label: label,
+          value: 1.0
+        });
+      }
+    });
+  });
+
   // Manipulação do Formulário de Qualificação
   const leadForm = document.getElementById('form-avaliacao');
   if (leadForm) {
@@ -39,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
 
       const submitBtn = leadForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'Enviando estimativa...';
 
@@ -63,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `• *WhatsApp:* ${whatsapp}`
       );
 
-      // Disparo de evento do Google Ads (caso a tag esteja instalada)
+      // Disparo de evento do Google Ads
       if (typeof window.gtag === 'function') {
         window.gtag('event', 'generate_lead', {
           event_category: 'Engenharia de Avaliações',
@@ -85,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      // Salva no sessionStorage para ler na página de agradecimento se necessário
+      // Salva no sessionStorage para ler na página de agradecimento
       try {
         sessionStorage.setItem('raizes_lead_nome', nome);
         sessionStorage.setItem('raizes_lead_objetivo', objetivo);
