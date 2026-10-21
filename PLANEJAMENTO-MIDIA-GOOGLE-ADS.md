@@ -10,7 +10,7 @@ Diferente de e-commerce ou produtos de baixo valor, o mercado de engenharia de a
 
 #### Premissas Financeiras do Serviço (Raízes):
 * **Ticket Médio por Laudo:** R$ 7.500,00 (Laudos simples de R$ 4.500 a laudos complexos de R$ 25.000+).
-* **Custo Marginal Direto (Vistoria, Deslocamento e ART no CREA):** ~R$ 1.500,00 a R$ 2.000,00.
+* **Custo Marginal Direto (Vistoria, Deslocamento e Selo Certificador COFECI/CNAI):** ~R$ 1.500,00 a R$ 2.000,00.
 * **Margem de Contribuição Média:** R$ 5.500,00 (~73%).
 * **CPA Máximo de Equilíbrio (Break-even):** R$ 5.500,00 (ponto zero de lucro).
 * **CPA Meta Alvo (Target CPA):** **R$ 800,00 a R$ 1.500,00 por cliente fechado** (gerando um retorno de **5x a 9x sobre o investimento em anúncios**).
@@ -126,7 +126,7 @@ Nunca passe apenas um número solto no WhatsApp. Envie uma mensagem estruturada 
 > *✓ Vistoria técnica presencial in loco com registro fotográfico georreferenciado;*  
 > *✓ Caracterização pedológica de solos, benfeitorias, pastagens/lavouras e outorgas d'água;*  
 > *✓ Tratamento estatístico de mercado por regressão linear na microrregião;*  
-> *✓ Emissão de ART (Anotação de Responsabilidade Técnica) registrada no CREA-MG;*  
+> *✓ Emissão do Parecer Técnico de Avaliação Mercadológica (PTAM) com Selo Certificador COFECI (CNAI / CRECI-MG);*  
 > *✓ Entrega do Dossiê Pericial completo com assinatura digital qualificada ICP-Brasil.*
 >
 > *Prazo de entrega: [X] dias úteis após a vistoria.*  

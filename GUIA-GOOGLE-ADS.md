@@ -48,7 +48,7 @@ Trabalhe **apenas** com correspondência de frase (`" "`) e exata (`[ ]`).
 "laudo nbr 14653 rural"
 [perito avaliacao de imoveis rurais]
 "perito avaliador de fazendas"
-"engenheiro agronomo laudo fazenda"
+"perito rural cnai avaliacao"
 "avaliacao de fazenda para financiamento"
 ```
 
@@ -127,11 +127,11 @@ trabalho perito
 #### Títulos de Alta Conversão (Insira pelo menos 10 nos anúncios):
 1. `Avaliação de Fazendas em MG` (Relevância geográfica)
 2. `Laudo Técnico NBR 14653-3` (Autoridade técnica)
-3. `Laudos com Emissão de ART` (Segurança legal)
+3. `Laudos com Selo COFECI e CNAI` (Segurança legal)
 4. `Avaliação para Bancos e Crédito` (Finalidade direta)
 5. `Aceito no Banco do Brasil e SFN` (Prova de aceitação)
 6. `Laudo Rural para Inventários` (Dor sucessória)
-7. `Sem Achismo: Engenharia Pericial` (Contraste com corretor)
+7. `Sem Achismo: Perícia Rural CNAI` (Contraste com corretor comum)
 8. `Terra Nua, Lavouras e Sedes` (Especificidade Hopkins)
 9. `Raízes — Avaliação Rural` (Branding)
 10. `Evite Glosa na Garantia Bancária` (Canalização de dor)
@@ -142,7 +142,7 @@ trabalho perito
 15. `Sigilo Patrimonial Absoluto` (Objeção desfeita)
 
 #### Descrições de Alto Impacto (Insira 4):
-1. `Laudos periciais e avaliações de fazendas segundo a ABNT NBR 14653-3 com ART no CREA.`
+1. `Pareceres PTAM e avaliações periciais de fazendas segundo a ABNT NBR 14653-3 com Selo COFECI.`
 2. `Atendimento para garantias bancárias, crédito rural, inventários e transações comerciais.`
 3. `Vistoria presencial criteriosa de solos, benfeitorias, lavouras de café e outorgas d'água.`
 4. `Solicite uma estimativa de honorários e cronograma para sua propriedade em Minas Gerais.`
